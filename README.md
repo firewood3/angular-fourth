@@ -213,7 +213,7 @@ let boardId = this._route.snapshot.params['id'];
 단일책임원칙(single responsibility principle): 하나의 컴포넌트는 하나의 기능만 담당하므로 새로운 기능으로 수정하거나 기능을 추가해야 하는 경우 다른 컴포넌트에 대한 영향을 걱정할 필요가 없다.
 
 **@Input : 부모 데이터 -> 자식 데이터**
-자식 TS
+<br>자식 TS
 ```ts
 @Input()
 task: Task;
@@ -224,16 +224,20 @@ task: Task;
 ```
 
 **@Output : 자식 데이터 -> 부모 데이터**
+<br>자식 TS
 ```ts
 @Output()
 public onAddsubTask: EventEmitter<SubTask>;
 ```
+부모 HTML(Selector)
 ```html
 <app-task (onAddsubTask)="addsubTask($event)"></app-task>
 ```
+자식 TS
 ```ts
 this.onAddsubTask.emit(newsubTask);
 ```
+부모 HTML(Selector)
 ```ts
 addsubTask(event) {
   console.log('Event Fired');
