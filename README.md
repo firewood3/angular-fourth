@@ -237,7 +237,7 @@ public onAddsubTask: EventEmitter<SubTask>;
 ```ts
 this.onAddsubTask.emit(newsubTask);
 ```
-부모 HTML(Selector)
+부모 TS
 ```ts
 addsubTask(event) {
   console.log('Event Fired');
